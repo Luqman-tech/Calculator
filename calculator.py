@@ -35,7 +35,7 @@ def tan(x):
 def factorial(x):
     return math.factorial(x)
 
-def scientific_calculator():
+def calculator():
     while True:
         print("\nScientific Calculator")
         print("1. Addition")
@@ -56,9 +56,10 @@ def scientific_calculator():
         if choice == '12':
             print("Exiting calculator. Goodbye!")
             break
-        
+        #select simple operations
         try:
             if choice in ['1', '2', '3', '4', '5']:
+                #input the numbers needed for operation
                 num1 = float(input("Enter first number: "))
                 num2 = float(input("Enter second number: "))
                 
@@ -70,7 +71,8 @@ def scientific_calculator():
                     '5': power(num1, num2)
                 }
                 print(f"Result: {operations[choice]}")
-            
+
+            #select complex operations
             elif choice in ['6', '7', '8', '9', '10', '11']:
                 num = float(input("Enter number: "))
                 
